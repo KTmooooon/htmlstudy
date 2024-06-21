@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+    <style>
+        .box{
+            width: 600px;
+            height: 400px;
+            /* 상하좌우 4방향 border 테두리를 기준으로 안쪽에 여백이 추가된다 */
+            /* 영역크기 변동 */
+            padding: 20px;
+
+            /* 위쪽에만 내부 여백 40px 적용 */
+            /* top bottom left right */
+            padding-top: 40px;
+
+            /* padding을 주면 크기가 변동될 수 있음에 유의 */
+            background-color: bisque;
+        }
+
+
+        div{
+            border: 2px solid black;
+        }
+
+        .card{
+            width: 200px;
+            height: 200px;
+        }
+
+        .box2{
+            width: 600px;
+            height: 400px;
+        }
+
+        .card2{
+            width: 200px;
+            height: 200px;
+            /* border 테두리를 기준으로 바깥쪽으로 여백이 생긴다 */
+            margin: 40px;
+            background-color: beige;
+        }
+
+        .box2 > img{
+            width: 100px;
+            height: 100px;
+            /* 해당 태그 영역에 마우스 커서를 올리면 커서의 모양이 바뀐다 */
+            cursor: pointer;
+            /* margin은 클릭 영역에 속하지 않는다 */
+            padding: 40px;
+        }
+    </style>
+</head>
+<body>
+    
+    <div class="box">
+        <div class="card"></div> 
+    </div>
+
+    <div class="box2">
+        <div class="card2"></div>
+    </div>
+
+    <div class="box2">
+        <img src="data:image/png;base64,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" alt="">
+
+    </div>
+</body>
+</html>

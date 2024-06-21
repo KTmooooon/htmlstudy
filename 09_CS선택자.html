@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        /*  */
+        .box{
+            border: 2px dotted black;
+            width : 200px;
+            height: 200px;
+            background-color: brown;
+        }
+
+        /*  */
+        div{
+            background-color:  aquamarine;
+        }
+
+        /*  */
+        img{
+            width: 300px;
+        }
+
+        /* *은 모든태그에 style을 적용 */
+        *{
+            margin: 0;
+            padding: 0;
+        }
+
+        #one{
+            width: 100px;
+            height: 100px;
+        }
+
+
+        .big{
+            font-size: 30px;
+        }
+
+        /* type이 text인 input 태그에 style 적용 */
+        input[type=text]{
+            font-size: 30px;
+        }
+
+        /* 여름 방학 적혀있는 p태그에 style 주기 */
+        .white{
+            color: white;
+        }
+
+        .container{
+            border: 2px solid red;
+        }
+
+        /* container 클래스를 적용한 태그 내 p태그에 style 적용*/
+        .container p{
+            color: white;
+        }
+
+        .container > div{
+            background-color: white;
+        }
+
+        .container >p{
+            font-weight: bold
+        }
+
+        /* container의 자식 div 태그 중 두번째 태그에 style 적용 */
+        .container > div:nth-child(2){
+            background-color: black;
+        }
+    </style>
+</head>
+<body>
+    
+    <div class="box"></div>
+    <div class="box" style="background-color: pink;"></div>
+
+    <p>마진이 사라졌다.. </p>
+
+    <!-- class 속성과 id 속성은 모든 태그에 존재한다 -->
+    <!-- id는 특정 태그를 식별하기 위해 사용된다. -->
+    <!-- 수많은 태그에 대해 중복된 값이 들어가면 안된다. -->
+    <div id="one"></div>
+
+    <div class="one"></div>
+
+    <input type="checkbox" name="" id="">
+    <input type="text">
+    <input type="password">
+
+    <hr>
+
+    <div class="container">
+        <div>
+            <img src="" alt="">
+        </div>
+        <div>
+           <p> 여름방학 </p> 
+        </div>
+        <p>copyright</p>
+    </div>
+</body>
+</html>
